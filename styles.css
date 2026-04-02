@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s;
+  font-family: "Raleway";
+}
+
+:root {
+  --color1: #ecb022;
+  --color2: #232525;
+  --color3: #898d8d;
+  --color4: #c7c9c7;
+  --color5: #e0e0e0;
+
+  --s1: 4px;
+  --s2: 8px;
+  --s3: 12px;
+  --s4: 16px;
+  --s5: 24px;
+  --s6: 32px;
+  --s7: 48px;
+  --s8: 64px;
+  --s9: 96px;
+  --s10: 128px;
+  --s11: 192px;
+  --s12: 256px;
+  --s13: 384px;
+  --s14: 512px;
+  --s15: 640px;
+  --s16: 768px;
+}
+
+button {
+  display: flex;
+
+  background: none;
+  border: none;
+
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+
+  background-image: url(./assets/piso.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  & header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: var(--s4);
+
+    background-color: var(--color1);
+
+    & img {
+      width: var(--s8);
+    }
+
+    & nav {
+      display: none;
+      gap: var(--s2);
+    }
+  }
+
+  & #inicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--s3);
+    flex: 1;
+
+    padding: var(--s5);
+
+    background-color: #000000a6;
+
+    color: var(--color5);
+    text-align: center;
+
+    & h1 {
+      font-size: var(--s6);
+    }
+
+    & p {
+      line-height: var(--s5);
+    }
+
+    a {
+      width: fit-content;
+      padding: var(--s4);
+
+      background-color: var(--color1);
+      border-radius: var(--s1);
+
+      color: var(--color5);
+      font-size: var(--s4);
+      font-weight: 700;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+#sobre {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s4);
+
+  background-color: var(--color2);
+
+  & div {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s4);
+
+    padding: var(--s7) var(--s6);
+
+    & h2,
+    p {
+      color: var(--color5);
+      line-height: var(--s5);
+    }
+
+    & article {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      gap: var(--s2);
+
+      padding: var(--s5);
+
+      background-color: var(--color1);
+      box-shadow: 0 0 8px 4px #00000023;
+      border-radius: var(--s1);
+
+      & h3,
+      p {
+        font-size: var(--s4);
+        line-height: var(--s5);
+      }
+    }
+  }
+
+  & div:nth-child(2) {
+    background-color: var(--color5);
+
+    & h2,
+    h3,
+    p {
+      color: var(--color2);
+    }
+  }
+}
+
+#serviços {
+  display: flex;
+  flex-direction: column;
+
+  padding: 0 var(--s6) var(--s6) var(--s6);
+
+  background-color: var(--color4);
+
+  & h2 {
+    margin: var(--s6) 0;
+    text-align: center;
+  }
+
+  & div {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s4);
+
+    & article {
+      display: flex;
+      flex-direction: column;
+      gap: var(--s2);
+
+      padding: var(--s3);
+
+      background-color: var(--color5);
+      box-shadow: 0 0 8px 4px #00000023;
+      border-left: var(--s2) solid var(--color1);
+      border-radius: var(--s3);
+    }
+  }
+
+  & div:nth-child(2) {
+  }
+}
+
+#atendimentos {
+}
+
+#whatsappButton {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+
+  display: flex;
+  flex: 1;
+
+  width: var(--s8);
+  margin: var(--s4);
+  padding: var(--s1);
+  aspect-ratio: 1/1;
+
+  background-color: #25d366;
+  border-radius: var(--s2);
+}
