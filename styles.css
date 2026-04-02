@@ -11,9 +11,9 @@
 :root {
   --color1: #ecb022;
   --color2: #232525;
-  --color3: #898d8d;
-  --color4: #c7c9c7;
-  --color5: #e0e0e0;
+  --color3: #4b5353;
+  --color4: #bbbbbb;
+  --color5: #ececec;
 
   --s1: 4px;
   --s2: 8px;
@@ -148,10 +148,11 @@ main {
       flex: 1;
       gap: var(--s2);
 
+      margin: var(--s1) 0;
       padding: var(--s5);
 
       background-color: var(--color1);
-      box-shadow: 0 0 8px 4px #00000023;
+      box-shadow: 0 0 8px #0000009f;
       border-radius: var(--s1);
 
       & h3,
@@ -178,12 +179,10 @@ main {
   flex-direction: column;
   align-items: center;
 
-  padding: 0 var(--s6) var(--s6) var(--s6);
-
   background-color: var(--color4);
 
   & h2 {
-    margin: var(--s6) 0;
+    margin: var(--s6) 0 0 0;
     text-align: center;
   }
 
@@ -193,6 +192,7 @@ main {
     gap: var(--s4);
 
     width: 100%;
+    padding: 0 var(--s6) var(--s6) var(--s6);
 
     & article {
       display: flex;
@@ -203,32 +203,31 @@ main {
       padding: var(--s3);
 
       background-color: var(--color5);
-      box-shadow: 0 0 8px 4px #00000023;
+      box-shadow: 0 0 8px #0000009f;
       border-left: var(--s2) solid var(--color1);
       border-radius: var(--s3);
     }
   }
 
-  & div:nth-child(4) {
-    width: min-content;
+  & div:nth-child(2) {
+    padding: 0 var(--s6) var(--s6) var(--s6);
+
+    background-color: var(--color5);
 
     & article {
       width: fit-content;
       margin: 0 auto;
+      padding: var(--s2);
 
       border: none;
+      border-radius: 0px;
 
       & img {
-        width: var(--s12);
-        height: var(--s12);
-
+        width: 100%;
         object-fit: cover;
       }
     }
   }
-}
-
-#atendimentos {
 }
 
 #whatsappButton {
@@ -246,4 +245,95 @@ main {
 
   background-color: #25d366;
   border-radius: var(--s2);
+  opacity: 20%;
+
+  &:hover {
+    opacity: 100%;
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+
+  padding: var(--s4);
+
+  background-color: var(--color2);
+
+  & > div {
+    display: flex;
+    gap: var(--s4);
+
+    width: fit-content;
+
+    & img {
+      width: var(--s9);
+      height: min-content;
+      filter: invert(100%);
+    }
+
+    & div {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      gap: var(--s1);
+
+      padding: var(--s1);
+
+      font-size: var(--s3);
+
+      & h4 {
+        color: var(--color4);
+      }
+
+      & a {
+        display: flex;
+        align-items: center;
+        gap: var(--s1);
+
+        color: var(--color3);
+        font-weight: 400;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  & > hr {
+    width: 100%;
+    margin: var(--s6) auto;
+    border: none;
+    border-bottom: 1px solid var(--color3);
+  }
+
+  & > a {
+    text-align: center;
+  }
+
+  & > span {
+    color: var(--color3);
+    text-align: center;
+  }
+
+  & #dev {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s1);
+
+    & h4 {
+      color: var(--color5);
+    }
+
+    & a {
+      color: var(--color3);
+      font-size: var(--s3);
+
+      &:hover {
+        color: var(--color5);
+        text-decoration: underline;
+      }
+    }
+  }
 }
