@@ -9,7 +9,7 @@
 }
 
 :root {
-  --color1: #ecb022;
+  --color1: #eeb544;
   --color2: #232525;
   --color3: #4b5353;
   --color4: #bbbbbb;
@@ -72,7 +72,11 @@ body {
   height: fit-content;
   padding: var(--s4);
 
-  background-color: #ecaf22;
+  background-color: var(--color1);
+  background-image: url(./assets/yellow-background.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
   overflow: hidden;
 
@@ -81,7 +85,7 @@ body {
   }
 }
 
-& nav {
+& #menu {
   position: fixed;
   top: 0;
   right: 0;
@@ -226,7 +230,7 @@ body {
         border-radius: var(--s1);
 
         &:hover {
-          background-color: #dda41e
+          background-color: #dda637;
         }
       }
 
@@ -439,5 +443,29 @@ footer {
   & span {
     color: var(--color3);
     text-align: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .btn-menu {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    gap: var(--s4);
+
+    & a {
+      padding: var(--s2);
+
+      border-radius: var(--s1);
+
+      color: var(--color2);
+
+      &:hover {
+        background-color: var(--color2);
+        color: var(--color5);
+      }
+    }
   }
 }
