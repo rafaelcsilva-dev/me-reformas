@@ -455,7 +455,7 @@ footer {
     display: none;
   }
 
-  nav {
+  header nav {
     display: flex;
     gap: var(--s4);
 
