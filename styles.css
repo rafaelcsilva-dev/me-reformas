@@ -83,6 +83,10 @@ body {
   & img {
     width: var(--s8);
   }
+
+  & nav {
+    display: none;
+  }
 }
 
 & #menu {
